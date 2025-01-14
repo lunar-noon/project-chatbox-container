@@ -1,9 +1,15 @@
 name: Java CI Testing with Maven
+
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
+permissions:
+  contents: read
+  checks: write  # Grant permission to create check runs
+
 jobs:
   build:
     runs-on: ubuntu-latest
